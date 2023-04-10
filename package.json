@@ -1,0 +1,43 @@
+{
+  "name": "@yosulramp/material-color-palette-js",
+  "version": "1.0.0",
+  "description": "Get color palette for Material Design as Javascript version for Hammwerk/material-color-palette",
+  "keywords": [
+    "material",
+    "design",
+    "palette"
+  ],
+  "homepage": "https://github.com/yosulramp/material-color-palette-js",
+  "license": "MIT",
+  "author": "Jason Park",
+  "files": [
+    "dist/src/"
+  ],
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yosulramp/material-color-palette-js.git"
+  },
+  "scripts": {
+    "build": "tsup",
+    "lint": "eslint .",
+    "test": "jest",
+    "prepublish": "npm run build"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.0",
+    "@types/node": "^18.15.11",
+    "@typescript-eslint/eslint-plugin": "^5.57.0",
+    "@typescript-eslint/parser": "^5.57.0",
+    "eslint": "^8.37.0",
+    "eslint-config-prettier": "^8.8.0",
+    "jest": "^29.5.0",
+    "ts-jest": "^29.1.0",
+    "ts-node": "^10.9.1",
+    "tslib": "^2.5.0",
+    "tsup": "^6.7.0",
+    "typescript": "^4.9.5"
+  }
+}
