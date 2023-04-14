@@ -1,0 +1,42 @@
+.color-palette-tool {
+  display: flex;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.color-palette-section {
+  background-color: #fafafa;
+  flex: 1 700px;
+  padding: 16px;
+
+  h1 {
+    margin-top: 16px;
+  }
+}
+
+.color-palette {
+  display: inline-block;
+  margin-bottom: 24px;
+
+  &__color {
+    width: 64px;
+    height: 64px;
+  }
+
+  &__label {
+    text-align: center;
+  }
+
+  &__weight {
+    text-align: center;
+  }
+}
+
+.color-input-section {
+  flex: auto;
+  padding: 16px;
+}
+
+.color-input-form {
+  margin-top: 16px;
+}

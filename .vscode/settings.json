@@ -1,3 +1,10 @@
 {
-  "cSpell.words": ["Hammwerk", "treeshake", "tsup", "yosulramp"]
+  "cSpell.words": [
+    "Hammwerk",
+    "nojekyll",
+    "predeploy",
+    "treeshake",
+    "tsup",
+    "yosulramp"
+  ]
 }

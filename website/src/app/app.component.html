@@ -1,0 +1,109 @@
+<article class="color-palette-tool">
+  <section class="color-palette-section">
+    <h1>Primary</h1>
+    <div
+      class="color-palette"
+      *ngFor="let colorHex of primaryPaletteAsHex; index as i"
+    >
+      <div class="container">
+        <div
+          class="color-palette__color"
+          [style.background]="'#' + colorHex"
+          [style.border-radius]="
+            colorHex === standardPrimaryColorHex ? '50%' : 0
+          "
+        ></div>
+        <div class="color-palette__label">
+          {{ colorHex }}
+        </div>
+        <div class="color-palette__weight">
+          {{ colorWeight[i] }}
+        </div>
+      </div>
+    </div>
+
+    <h1>Complementary</h1>
+    <div>
+      <div
+        class="color-palette"
+        *ngFor="let colorHex of complementaryPaletteAsHex; index as i"
+      >
+        <div class="container">
+          <div
+            class="color-palette__color"
+            [style.background]="'#' + colorHex"
+            [style.border-radius]="
+              colorHex === complementaryUserColorHex ? '50%' : 0
+            "
+          ></div>
+          <div class="color-palette__label">
+            {{ colorHex }}
+          </div>
+          <div class="color-palette__weight">
+            {{ colorWeight[i] }}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h1>Analogous</h1>
+    <div *ngFor="let analogousPalette of analogousPaletteAsHex; index as i">
+      <div
+        class="color-palette"
+        *ngFor="let colorHex of analogousPalette; index as j"
+      >
+        <div
+          class="color-palette__color"
+          [style.background]="'#' + colorHex"
+          [style.border-radius]="
+            colorHex === analogousUserColorHex?.[i] ? '50%' : 0
+          "
+        ></div>
+        <div class="color-palette__label">
+          {{ colorHex }}
+        </div>
+        <div class="color-palette__weight">
+          {{ colorWeight[j] }}
+        </div>
+      </div>
+    </div>
+
+    <h1>Triadic</h1>
+    <div *ngFor="let triadicPalette of triadicPaletteAsHex; index as i">
+      <div
+        class="color-palette"
+        *ngFor="let colorHex of triadicPalette; index as j"
+      >
+        <div
+          class="color-palette__color"
+          [style.background]="'#' + colorHex"
+          [style.border-radius]="
+            colorHex === triadicUserColorHex?.[i] ? '50%' : 0
+          "
+        ></div>
+        <div class="color-palette__label">
+          {{ colorHex }}
+        </div>
+        <div class="color-palette__weight">
+          {{ colorWeight[j] }}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="color-input-section">
+    <form class="color-input-form">
+      <mat-form-field>
+        <mat-label>Color Hex</mat-label>
+        <input
+          matInput
+          placeholder="ffffff"
+          [value]="userColorHex"
+          (input)="onChangePrimaryColor($event)"
+        />
+      </mat-form-field>
+    </form>
+  </section>
+</article>
+
+<router-outlet></router-outlet>
