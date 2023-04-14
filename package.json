@@ -1,6 +1,6 @@
 {
   "name": "@yosulramp/material-color-palette-js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Get color palette for Material Design as Javascript version for Hammwerk/material-color-palette",
   "keywords": [
     "material",
@@ -11,7 +11,7 @@
   "license": "MIT",
   "author": "Jason Park",
   "files": [
-    "dist/src/"
+    "dist/"
   ],
   "main": "dist/index.js",
   "module": "dist/index.mjs",
