@@ -94,10 +94,11 @@ const toRgbColorOrNull = (hexColor: string) => {
   return rgbColor;
 };
 
-export { RgbColor };
 export {
   createPrimaryPalette,
   createComplementaryPalette,
   createAnalogousPalette,
   createTriadicPalette,
+  RgbColor,
+  toRgbColorOrNull,
 };

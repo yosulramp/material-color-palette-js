@@ -14,18 +14,22 @@ import {
   createComplementaryPalette,
   createPrimaryPalette,
   createTriadicPalette,
+  toRgbColorOrNull,
 } from 'material-color-palette-js';
 
 const customPrimaryPalette = createPrimaryPalette('F44336');
 const colors = customPrimaryPalette?.map(rgbColor => rgbColor.rgbHex);
 // [ "FFEBEE", "FFCDD2", "EF9A9A", "E57373", "EF5350", "F44336", "E53935", "D32F2F", "C62828", "B71B1C" ]
 
+const complementaryColor =
+  toRgbColorOrNull('F44336')?.toHslColor().complementaryColor; // 36E7F4
 const customComplementaryPalette = createComplementaryPalette('F44336');
 const complementaryPaletteAsHex = this.complementaryPalette?.map(
   rgbColor => rgbColor.rgbHex
 );
 // [ "FCE7CC", "E2C4A9", "C2A082", "A07D5A", "88623D", "6F491F", "65401A", "563412", "49270A", "3B1A00" ]
 
+const analogousColor = toRgbColorOrNull('F44336')?.toHslColor().analogousColor; // ["F43688","F4A236"]
 const customAnalogousPalette = createAnalogousPalette('F44336');
 const analogousPaletteAsHex = this.createAnalogousPalette?.map(rgbColors =>
   rgbColors.map(rgbColor => rgbColor.rgbHex)
@@ -35,6 +39,7 @@ const analogousPaletteAsHex = this.createAnalogousPalette?.map(rgbColors =>
 //     [ "E5E7F0", "BFC2DB", "969AC3", "6E74AB", "51579B", "353C8B", "2F3582", "272C77", "1F226B", "121256" ]
 // ]
 
+const triadicColor = toRgbColorOrNull('F44336')?.toHslColor().triadicColor; // ["E7F436","36F443"]
 const customTriadicPalette = createTriadicPalette('F44336');
 const triadicPaletteAsHex = this.createTriadicPalette?.map(rgbColors =>
   rgbColors.map(rgbColor => rgbColor.rgbHex)
