@@ -21,13 +21,16 @@ class GoldenPalette {
   }
 
   createCustomPalette(customBaseColor: LchColor): LchColor[] {
-    let maxLightness = 100;
+    let maxLightness = 100.0;
 
     const closestGoldenPaletteColor = this.getClosestColor(customBaseColor);
     const closestColorIndex = this.colors.indexOf(closestGoldenPaletteColor);
+    const adjustMaxLightness = (color: LchColor) =>
+      (color.getLightness() - 1.7).coerceAtLeast(0.0);
 
     return this.colors.map((color, index) => {
       if (color === closestGoldenPaletteColor) {
+        maxLightness = adjustMaxLightness(customBaseColor);
         return customBaseColor;
       }
 
@@ -53,13 +56,12 @@ class GoldenPalette {
             )
         )
         .adjustLightness((lightness: number) =>
-          lightness.coerceIn(0, maxLightness)
+          lightness.coerceIn(0.0, maxLightness)
         )
         .adjustChroma((chroma: number) => chroma.coerceAtLeast(0.0))
-        .adjustHue((hue: number) => (hue + 360) % 360);
+        .adjustHue((hue: number) => (hue + 360.0) % 360);
 
-      maxLightness = (adjustedColor.getLightness() - 1.7).coerceAtLeast(0.0);
-
+      maxLightness = adjustMaxLightness(adjustedColor);
       return adjustedColor;
     });
   }

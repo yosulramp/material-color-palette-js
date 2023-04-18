@@ -6,6 +6,15 @@ import {
 } from './index';
 
 describe('Material Design match for default ', () => {
+  it('white color palette', () => {
+    const primaryHexColor = 'FFFFFF';
+
+    const calculatedWhitePalette = createPrimaryPalette(primaryHexColor)?.map(
+      color => color.rgbHex
+    );
+    expect(calculatedWhitePalette).toStrictEqual(defaultWhitePalette);
+  });
+
   it('red color palette', () => {
     const primaryHexColor = 'F44336';
 
@@ -160,6 +169,19 @@ describe('Material Design match for default ', () => {
     expect(calculatedBlueGrayPalette).toStrictEqual(defaultBlueGrayPalette);
   });
 });
+
+const defaultWhitePalette = [
+  'FFFFFF',
+  'FAFAFA',
+  'F5F5F5',
+  'F0F0F0',
+  'DEDEDE',
+  'C2C2C2',
+  '979797',
+  '818181',
+  '606060',
+  '3C3C3C',
+];
 
 const defaultRedPalette = [
   'FFEBEE',
