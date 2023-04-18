@@ -4,8 +4,8 @@ import type { JestConfigWithTsJest } from 'ts-jest';
 const jestConfig: JestConfigWithTsJest = {
   preset: 'ts-jest',
   testEnvironment: 'node',
-  modulePathIgnorePatterns: ['<rootDir>/build/'],
-  coveragePathIgnorePatterns: ['<rootDir>/build/'],
+  modulePathIgnorePatterns: ['<rootDir>/build/', '<rootDir>/website/'],
+  coveragePathIgnorePatterns: ['<rootDir>/build/', '<rootDir>/website/'],
 };
 
 export default jestConfig;
