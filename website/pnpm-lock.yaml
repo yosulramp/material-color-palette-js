@@ -32,8 +32,8 @@ dependencies:
     specifier: ^15.2.0
     version: 15.2.0(@angular/common@15.2.0)(@angular/core@15.2.0)(@angular/platform-browser@15.2.0)(rxjs@7.8.0)
   '@yosulramp/material-color-palette-js':
-    specifier: ^1.0.2
-    version: 1.0.2
+    specifier: ^1.0.3
+    version: 1.0.3
   rxjs:
     specifier: ~7.8.0
     version: 7.8.0
@@ -3091,8 +3091,8 @@ packages:
     resolution: {integrity: sha512-GpSwvyXOcOOlV70vbnzjj4fW5xW/FdUF6nQEt1ENy7m4ZCczi1+/buVUPAqmGfqznsORNFzUMjctTIp8a9tuCQ==}
     dev: true
 
-  /@yosulramp/material-color-palette-js@1.0.2:
-    resolution: {integrity: sha512-z0iBLNqrwfl3gBtV5HMKJkmEwkvOe2hMdqXm790FFmviajvY6Oy2wlJXzM4NlaAfqbSLOFQ28+dD1kzf2qkVwA==}
+  /@yosulramp/material-color-palette-js@1.0.3:
+    resolution: {integrity: sha512-Ds8OsXnX3Q8fbwfRK+wg78cSnaVUNTLJEqMq1mrPNWf+RoVAuT9Guo3r6ehPFNZVgm3EjGvYQIniZmI3I/nJEQ==}
     dev: false
 
   /abab@2.0.6:
