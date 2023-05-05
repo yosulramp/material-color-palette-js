@@ -6,7 +6,7 @@ This library have same result of [original material palette generator](https://m
 
 ## Usage
 
-Install package with `npm install material-color-palette-js`.
+Install package with `npm install @yosulramp/material-color-palette-js`.
 
 ```typescript
 import {
@@ -15,7 +15,7 @@ import {
   createPrimaryPalette,
   createTriadicPalette,
   toRgbColorOrNull,
-} from 'material-color-palette-js';
+} from '@yosulramp/material-color-palette-js';
 
 const customPrimaryPalette = createPrimaryPalette('F44336');
 const colors = customPrimaryPalette?.map(rgbColor => rgbColor.rgbHex);

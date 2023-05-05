@@ -1,6 +1,6 @@
 {
   "name": "@yosulramp/material-color-palette-js",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Get color palette for Material Design as Javascript version for Hammwerk/material-color-palette",
   "keywords": [
     "material",
